@@ -1,0 +1,510 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Estilização para alinhar os elementos em coluna no centro da página */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* Estilização para adicionar uma imagem de fundo */
+body {
+  width: 950px;
+  margin: 0 auto;
+  background-image: url(https://i.pinimg.com/1200x/89/24/fd/8924fd104061a39991dba1f84005707e.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+/* Estilização para adicionar uma borda ao redor dos elementos */
+.gallery {
+  background: #ca7e8e;
+  color: #885959;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: none;
+  max-width: 1000px;
+  position: relative;
+  height: 5150px;
+  box-sizing: border-box;
+  flex: 2;
+}
+
+.about {
+  background: #ca7e8e;
+  color: #885959;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: none;
+  max-width: 1000px;
+  position: relative;
+  height: 2550px;
+  box-sizing: border-box;
+  flex: 2;
+}
+
+.container {
+  display: flex; /* Alinha main e aside horizontalmente */
+  border: 2px solid #fdc6cf; /* Define a borda em volta do main e aside */
+  padding: 25px; 
+  gap: 10px; 
+  box-sizing: border-box; /* Inclui a borda e o padding na largura total do container */
+  width: 150%;
+  max-width: 2000px; 
+  margin: 0 auto;
+  background: #fdc6cf;
+  height: 5000;
+}
+
+aside {
+  flex: 1;
+  background: #ca7e8e;
+  color: #885959;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: none;
+  max-width: 1000px;
+  position: relative;
+  height: 500px;
+  box-sizing: border-box;
+}
+
+
+.buttonProfile {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttonProfile button {
+  position: relative;
+  padding: 10px 30px;
+  color: #885959;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s, color 0.2s;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+.buttonProfile button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #b2dafc,
+    #bed7fd,
+    #ccd4fc,
+    #dfcff5,
+    #eaccee,
+    #fbc8db,
+    #ffc7d1,
+    #ffc7cc
+  );
+  background-size: 400%;
+  transition: 0.5s;
+  z-index: -1; /* Posição atrás do texto */
+  opacity: 0;
+  border-radius: 20px;
+}
+
+.buttonProfile button:hover::before {
+  opacity: 1;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+.buttonProfile button:hover {
+  color: #ffffff;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border:5px solid #d38ca1;
+  object-fit: cover;
+  position: absolute;
+  top: 120px; /* Controla a altura da foto de perfil */
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+} 
+
+.cover-photo img {
+  width: 100%;
+  height: 200px; /* Altura da foto de capa */
+  object-fit: cover;
+}
+
+.post {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #ffffff; 
+  color: #885959; 
+  padding: 20px;
+  margin: 10px auto;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  overflow: none;
+  max-width: 850px;
+  position: relative;
+}
+
+.post p {
+  text-align: left;
+}
+
+.name {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 11px;
+}
+
+.miniProfile {
+  width: 50px;
+  height: 50px;
+  border-radius: 15%;
+  border:2px solid #da9595;
+  margin-right: 15px;
+  top: 100px; /* Controla a altura da foto de perfil */
+  overflow: hidden;
+} 
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0%;
+  margin: 0%;
+}
+
+.info h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.info p {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  gap: 15px;
+}
+ 
+.span {
+  color: rgb(53, 189, 189);
+}
+
+.perfilName h1 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding: 0;
+  color:#ffffff;
+}
+
+.perfilName h2 {
+  margin-top: 10px;
+  padding: 0;
+  color:hsl(0, 0%, 100%);
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.perfilName p {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 0;
+  color:#ffffff;
+}
+
+.divisoria  {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  color:#ffffff;
+}
+
+.assets {
+  display: flex;
+  justify-content: center;
+}
+
+.image1 {
+  padding-top: 30px;
+  width: 50%;
+}
+
+.hellokitty {
+  display: block;
+  margin: auto;
+  width: 30%;
+}
+
+/*Estilização do formulário de contato*/
+
+.contactMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 45px;
+  font-family: sans-serif;
+  background: #ffcedd;
+  width: 500px;
+  box-shadow: rgba(146, 71, 71, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.contactMe h2 {
+  color:#ca7e8e;
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+
+.contactMe form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form label {
+  display: flex;
+  align-items: flex-start;
+  color: #ca7e8e;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+form input {
+  padding: 15px;
+  outline: none;
+  border: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  transition: all 0.5s;
+}
+
+form input:focus {
+  border-radius: 16px;
+}
+
+form textarea {
+  padding: 10px;
+  outline: none;
+  border: 0;
+  font-size: 15px;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+}
+
+form textarea:focus {
+  border-radius: 16px;
+}
+
+form button {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  background: #ca7e8e;
+  border: 2px solid #ca7e8e;
+  color: #ffffff;
+  transition: all 0.5s;
+  margin-bottom: 20px;
+}
+
+form button:hover {
+  background: #f5f5f5;
+  color:#ca7e8e;
+  border-radius: 16px;
+} 
+
+/*Estilização da página de obrigada*/
+
+.thanks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.thankYou {
+  font-size: 45px;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+}
+
+.paragrafo {
+  color: #f5f5f5;
+  margin-bottom: 50px;
+}
+
+/*Estilização do botões das redes sociais*/
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 40px;
+}
+
+ul li {
+  width: 80px;
+  height: 80px;
+
+  background-color: #ffffff;
+  box-shadow: 0 8px 25px #88595983;
+  border-radius: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  transition: 0.2s;
+}
+
+ul li:hover {
+  width: 180px;
+}
+
+ul li span{
+  position: absolute;
+}
+
+ul li .iconsButton {
+  color: #ca7e8e;
+  transition: 0.2s;
+}
+
+ul li .textButton {
+  color: #ffffff;
+  font-size: 20px;
+  transform: scale(0);
+  transition: 0.2s;
+  transition-delay: 0.1s;
+}
+
+ul li:hover .textButton {
+  transform: scale(1);
+}
+
+ul li:hover .iconsButton {
+  transform: scale(0);
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+  inset: 0;
+  opacity: 0;
+  border-radius: 60px;
+}
+
+ul li:hover::before {
+  opacity: 1;
+}
+
+/*Estilização do mapa*/
+
+.map {
+  padding: 50px;
+}
+
+h2 {
+  text-align: center;
+  color: #ca7e8e;
+}
+
+.skills {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Estilos da tabela */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.skills-table th, .skills-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.skills-table th {
+  background-color: #ca7e8e;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.skills-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.skills-table tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+.skills-table td {
+  color: #535353;
+}
+
+.skills-table td:first-child {
+  font-weight: bold;
+}
